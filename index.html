@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+        <script src=".lib/HarmonyUtils.browser.js"></script>  
+        <script src=".lib/HarmonyJs.browser.js"></script>  
+        <script src=".lib/HarmonyAccount.browser.js"></script>  
+        <script src=".lib/HarmonyTransaction.browser.js"></script>  
+        <script src=".lib/HarmonyCrypto.browser.js"></script>  
+
+        <script src=".lib/utils.js"></script>
+
+
+        <script>
+        
+            const init = async () => {
+                let from = 'one1crzp6qhczwms38uchngp3xk04ak48ghlky0jkc';
+                let to = 'one128chgcfseljufvahuygu65lwuthcpuq5aefa69';
+
+                let hmy = harmony_utils.initHarmony('test');
+                let hmy_balance = await harmony_utils.getAddressBalance(hmy, 'one1crzp6qhczwms38uchngp3xk04ak48ghlky0jkc')
+                let harmonyExt = await harmony_utils.initHarmonyExtension();
+                let address = await harmony_utils.loginHarmonyExtension(harmonyExt);
+
+                harmony_utils.transfer(hmy, harmonyExt, from, to, 1).then(e=> console.log("BYB", e)).catch(err => console.log("HIS", err))
+
+            };
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

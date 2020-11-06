@@ -1,0 +1,18 @@
+doctype
+html(ng-app)
+  head
+    title= title
+    script(src='/javascripts/lib/HarmonyUtils.browser.js', type='text/javascript')
+    script(src='/javascripts/lib/HarmonyJs.browser.js', type='text/javascript')
+    script(src='/javascripts/lib/HarmonyAccount.browser.js', type='text/javascript')
+    script(src='/javascripts/lib/HarmonyTransaction.browser.js', type='text/javascript')
+    script(src='/javascripts/lib/HarmonyCrypto.browser.js', type='text/javascript')
+    script(src='/javascripts/lib/utils.js', type='text/javascript')
+
+    script(src='/javascripts/init.js', type='text/javascript')
+  body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          
+    block content
